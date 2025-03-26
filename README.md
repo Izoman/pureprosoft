@@ -1,2 +1,2 @@
-# pureprosoft
-Pure pro soft website repository
+# Pure Pro Soft
+Pure Pro Soft website repository
