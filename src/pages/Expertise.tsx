@@ -147,7 +147,7 @@ const Expertise = () => {
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
                 <div className="mb-6 text-primary">
                   <img 
-                    src="solutions-architect-associate.svg" 
+                    src="public/solutions-architect-associate.svg" 
                     alt="AWS Certification" 
                     className="h-24 mx-auto"
                   />
@@ -161,7 +161,7 @@ const Expertise = () => {
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
                 <div className="mb-6 text-primary">
                   <img 
-                    src="microsoft-certified-fundamentals-badge.svg" 
+                    src="public/microsoft-certified-fundamentals-badge.svg" 
                     alt="Azure Fundamentals" 
                     className="h-24 mx-auto"
                   />
@@ -175,7 +175,7 @@ const Expertise = () => {
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
                 <div className="mb-6 text-primary">
                   <img 
-                    src="azure-ai-fundamentals.svg" 
+                    src="public/azure-ai-fundamentals.svg" 
                     alt="Azure AI Fundamentals" 
                     className="h-24 mx-auto"
                   />
@@ -189,7 +189,7 @@ const Expertise = () => {
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
                 <div className="mb-6 text-primary">
                   <img 
-                    src="azure-data-fundamentals.svg" 
+                    src="public/azure-data-fundamentals.svg" 
                     alt="Azure Data Fundamentals" 
                     className="h-24 mx-auto"
                   />
@@ -203,7 +203,7 @@ const Expertise = () => {
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
                 <div className="mb-6 text-primary">
                   <img 
-                    src="azure-security-compliance-and-identity-fundamentals.svg" 
+                    src="public/azure-security-compliance-and-identity-fundamentals.svg" 
                     alt="Azure Security, Compliance, and Identity Fundamentals" 
                     className="h-24 mx-auto"
                   />
