@@ -68,8 +68,8 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>             
+              <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MailIcon size={18} className="mt-1 flex-shrink-0" />
                 <span className="text-gray-300"><a href="mailto:info@pureprosoft.com">info@pureprosoft.com</a></span>
@@ -81,6 +81,16 @@ const Footer = () => {
                 </span>
               </li>
             </ul>
+            <br></br>
+            <div className="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://www.pureprosoft.com/" data-a2a-title="Pure Pro Soft">
+                <a className="a2a_dd" href="https://www.addtoany.com/share"></a>
+                <a className="a2a_button_facebook"></a>
+                <a className="a2a_button_linkedin"></a>
+                <a className="a2a_button_reddit"></a>
+                <a className="a2a_button_whatsapp"></a>
+                <a className="a2a_button_x"></a>
+                <a className="a2a_button_blogger"></a>
+              </div> 
           </div>
         </div>
         
