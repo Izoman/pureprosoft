@@ -197,7 +197,7 @@ const Index = () => {
                 </p>
                 <div className="space-y-6">
                   <CertificationCard
-                    title="AWS Solutions Architecture Associate"
+                    title="AWS Solutions Architect - Associate"
                     issuer="Amazon Web Services"
                   />
                   <CertificationCard
@@ -206,6 +206,14 @@ const Index = () => {
                   />
                   <CertificationCard
                     title="Azure AI Fundamentals"
+                    issuer="Microsoft"
+                  />
+                  <CertificationCard
+                    title="Azure Data Fundamentals"
+                    issuer="Microsoft"
+                  />
+                  <CertificationCard
+                    title="Azure Security, Compliance, and Identity Fundamentals"
                     issuer="Microsoft"
                   />
                 </div>

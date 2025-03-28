@@ -147,12 +147,12 @@ const Expertise = () => {
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
                 <div className="mb-6 text-primary">
                   <img 
-                    src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c4f6e183cb7e9a1d700d9a6fe1a41a9cc.png" 
+                    src="solutions-architect-associate.svg" 
                     alt="AWS Certification" 
                     className="h-24 mx-auto"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-purpro-800 mb-3 text-center">AWS Solutions Architecture Associate</h3>
+                <h3 className="text-xl font-semibold text-purpro-800 mb-3 text-center">AWS Solutions Architect - Associate</h3>
                 <p className="text-gray-600 text-center">
                   Validates expertise in designing and deploying scalable systems on AWS.
                 </p>
@@ -161,7 +161,7 @@ const Expertise = () => {
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
                 <div className="mb-6 text-primary">
                   <img 
-                    src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" 
+                    src="microsoft-certified-fundamentals-badge.svg" 
                     alt="Azure Fundamentals" 
                     className="h-24 mx-auto"
                   />
@@ -175,7 +175,7 @@ const Expertise = () => {
               <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
                 <div className="mb-6 text-primary">
                   <img 
-                    src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" 
+                    src="azure-ai-fundamentals.svg" 
                     alt="Azure AI Fundamentals" 
                     className="h-24 mx-auto"
                   />
@@ -183,6 +183,34 @@ const Expertise = () => {
                 <h3 className="text-xl font-semibold text-purpro-800 mb-3 text-center">Azure AI Fundamentals</h3>
                 <p className="text-gray-600 text-center">
                   Confirms understanding of machine learning and AI concepts on Microsoft Azure.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
+                <div className="mb-6 text-primary">
+                  <img 
+                    src="azure-data-fundamentals.svg" 
+                    alt="Azure Data Fundamentals" 
+                    className="h-24 mx-auto"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-purpro-800 mb-3 text-center">Azure Data Fundamentals</h3>
+                <p className="text-gray-600 text-center">
+                  Confirms understanding of data concepts and how they are implemented using Microsoft Azure data services.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
+                <div className="mb-6 text-primary">
+                  <img 
+                    src="azure-security-compliance-and-identity-fundamentals.svg" 
+                    alt="Azure Security, Compliance, and Identity Fundamentals" 
+                    className="h-24 mx-auto"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-purpro-800 mb-3 text-center">Azure Security, Compliance, and Identity Fundamentals</h3>
+                <p className="text-gray-600 text-center">
+                  Confirms functional understanding of security, compliance, and identity (SCI) across cloud-based and related Microsoft services.
                 </p>
               </div>
             </div>
