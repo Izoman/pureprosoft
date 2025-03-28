@@ -56,7 +56,7 @@ const About = () => {
                 <div 
                   className="rounded-lg shadow-xl overflow-hidden"
                   style={{
-                    backgroundImage: 'url(https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3)',
+                    backgroundImage: 'url(pro.jpeg)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     height: '400px'
@@ -127,7 +127,7 @@ const About = () => {
                 <div 
                   className="rounded-lg shadow-xl overflow-hidden"
                   style={{
-                    backgroundImage: 'url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3)',
+                    backgroundImage: 'url(programming.jpg)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     height: '400px'
