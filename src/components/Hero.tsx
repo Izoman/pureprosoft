@@ -33,7 +33,7 @@ const Hero = () => {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="px-8 py-6 text-lg bg-transparent border-white text-white hover:bg-white/10">
-              <Link to="/contact" className="flex items-center gap-2">
+              <Link to="/contact" className="flex items-center gap-2" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>
                 Contact Us <ArrowRight size={18} />
               </Link>
             </Button>

@@ -260,7 +260,7 @@ const Index = () => {
             Ready to transform your business with cutting-edge software solutions? Get in touch with us today!
           </p>
           <Button asChild variant="secondary" size="lg" className="px-8">
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Contact Us</Link>
           </Button>
         </div>
       </section>

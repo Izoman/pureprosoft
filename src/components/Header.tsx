@@ -43,6 +43,7 @@ const Header = () => {
               key={link.text}
               to={link.href}
               className="text-purpro-700 hover:text-primary font-medium transition-colors"
+              onClick={() => scrollTo({top: 0, behavior: 'smooth'})}
             >
               {link.text}
             </Link>
@@ -51,7 +52,7 @@ const Header = () => {
 
         <div className="hidden md:block">
           <Button asChild>
-            <Link to="/contact">Get In Touch</Link>
+            <Link to="/contact" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Get In Touch</Link>
           </Button>
         </div>
 
@@ -73,13 +74,20 @@ const Header = () => {
                 key={link.text}
                 to={link.href}
                 className="text-purpro-700 hover:text-primary font-medium py-2 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  scrollTo({top: 0, behavior: 'smooth'});
+                }}
               >
                 {link.text}
               </Link>
             ))}
             <Button asChild className="w-full">
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Get In Touch</Link>
+              <Link to="/contact" onClick={() => {
+                  setIsMenuOpen(false);
+                  scrollTo({top: 0, behavior: 'smooth'});
+                }}>Get In Touch</Link>
             </Button>
           </div>
         </div>

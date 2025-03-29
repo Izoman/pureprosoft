@@ -32,19 +32,19 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Home</Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>About Us</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Services</Link>
               </li>
               <li>
-                <Link to="/expertise" className="text-gray-300 hover:text-white transition-colors">Expertise</Link>
+                <Link to="/expertise" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Expertise</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Contact</Link>
               </li>
             </ul>
           </div>
@@ -53,16 +53,16 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Custom Software Development</Link>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Custom Software Development</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Consulting & Migration</Link>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Cloud Consulting & Migration</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Mobile & Web Application</Link>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Mobile & Web Application</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">End-to-End Test Automation</Link>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>End-to-End Test Automation</Link>
               </li>
             </ul>
           </div>

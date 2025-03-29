@@ -322,7 +322,7 @@ const Expertise = () => {
             Partner with us to bring your software vision to life with our technical expertise and industry knowledge.
           </p>
           <Button asChild variant="secondary" size="lg" className="px-8">
-            <Link to="/contact">Discuss Your Project</Link>
+            <Link to="/contact" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Discuss Your Project</Link>
           </Button>
         </div>
       </section>
