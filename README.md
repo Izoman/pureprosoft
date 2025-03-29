@@ -22,7 +22,7 @@ This is the repository for the Pure Pro Soft website. It is built using modern w
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/pureprosoft.git
+   git clone https://github.com/Izoman/pureprosoft.git
    cd pureprosoft
    ```
 
