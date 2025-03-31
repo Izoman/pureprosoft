@@ -9,6 +9,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [language, setLanguage] = useState(i18n.language); // Track current language
 
+  useEffect(() => {
+    const browserLanguage = navigator.language.split('-')[0]; // Get browser language
+    const initialLanguage = ['en', 'nl'].includes(browserLanguage) ? browserLanguage : 'en'; // Default to 'en' if unsupported
+    i18n.changeLanguage(initialLanguage);
+    setLanguage(initialLanguage);
+  }, []); // Run once on component mount
+
   const toggleLanguage = () => {
     const newLanguage = language === 'en' ? 'nl' : 'en';
     i18n.changeLanguage(newLanguage);
