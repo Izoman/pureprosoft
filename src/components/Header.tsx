@@ -1,25 +1,23 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
+import { t } from 'i18next';
+import i18n from 'i18next';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-{/*
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  */}
+  const [language, setLanguage] = useState(i18n.language); // Track current language
+
+  const toggleLanguage = () => {
+    const newLanguage = language === 'en' ? 'nl' : 'en';
+    i18n.changeLanguage(newLanguage);
+    setLanguage(newLanguage);
+  };
 
   const navLinks = [
     { text: "Home", href: "/" },
-    { text: "About", href: "/about" },
+    { text: t("about.title"), href: "/about" },
     { text: "Services", href: "/services" },
     { text: "Expertise", href: "/expertise" },
     { text: "Contact", href: "/contact" },
@@ -27,20 +25,11 @@ const Header = () => {
 
   return (
     <header 
-    className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm'}`}
-  >
-    {/*
-    <header 
-    className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
-    }`}
-    */}
-
-
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm`}
+    >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-        <img src="/logo.svg" alt="Pure Pro Soft" width={75} height={50} />
-
+          <img src="/logo.svg" alt="Pure Pro Soft" width={75} height={50} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -57,7 +46,15 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center space-x-4">
+          {/* Language Switcher */}
+          <button
+            onClick={toggleLanguage}
+            className="text-purpro-700 hover:text-primary font-medium transition-colors"
+          >
+            {language === 'en' ? 'NL' : 'EN'}
+          </button>
+
           <Button asChild>
             <Link to="/contact" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Get In Touch</Link>
           </Button>
@@ -81,7 +78,6 @@ const Header = () => {
                 key={link.text}
                 to={link.href}
                 className="text-purpro-700 hover:text-primary font-medium py-2 transition-colors"
-                
                 onClick={() => {
                   setIsMenuOpen(false);
                   scrollTo({top: 0, behavior: 'smooth'});
@@ -96,6 +92,13 @@ const Header = () => {
                   scrollTo({top: 0, behavior: 'smooth'});
                 }}>Get In Touch</Link>
             </Button>
+            {/* Mobile Language Switcher */}
+            <button
+              onClick={toggleLanguage}
+              className="text-purpro-700 hover:text-primary font-medium py-2 transition-colors"
+            >
+              {language === 'en' ? 'NL' : 'EN'}
+            </button>
           </div>
         </div>
       )}

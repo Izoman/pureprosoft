@@ -1,7 +1,7 @@
-
 import { Code, CloudLightning, Layers, FileCheck, ArrowRight, BarChart4, Database, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { t } from 'i18next';
 
 const Services = () => {
   const services = [
@@ -101,10 +101,8 @@ const Services = () => {
       <section className="bg-purpro-900 text-white py-24 px-4">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-blue-100">
-              Comprehensive software solutions to accelerate your business growth and digital transformation.
-            </p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('services.title')}</h1>
+            <p className="text-xl text-blue-100">{t('services.subtitle')}</p>
           </div>
         </div>
       </section>
@@ -113,10 +111,8 @@ const Services = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="section-heading">What We Offer</h2>
-            <p className="section-subheading">
-              We provide a wide range of software development and consulting services tailored to your unique business needs.
-            </p>
+            <h2 className="section-heading">{t('services.whatWeOffer')}</h2>
+            <p className="section-subheading">{t('services.whatWeOfferDescription')}</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
@@ -150,10 +146,8 @@ const Services = () => {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="section-heading">Our Approach</h2>
-              <p className="section-subheading">
-                We follow a structured methodology to ensure successful project delivery.
-              </p>
+              <h2 className="section-heading">{t('services.approach')}</h2>
+              <p className="section-subheading">{t('services.approachDescription')}</p>
             </div>
             
             <div className="space-y-12">
@@ -165,10 +159,8 @@ const Services = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">Discovery & Planning</h3>
-                    <p className="text-gray-600">
-                      We start by understanding your business goals, challenges, and requirements. This initial phase involves in-depth discussions to define the scope, objectives, and success criteria for your project. We then create a detailed roadmap that outlines the development process, timeline, and key milestones.
-                    </p>
+                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">{t('services.discoveryPlanning')}</h3>
+                    <p className="text-gray-600">{t('services.discoveryPlanningDescription')}</p>
                   </div>
                 </div>
               </div>
@@ -181,10 +173,8 @@ const Services = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">Design & Architecture</h3>
-                    <p className="text-gray-600">
-                      Once the planning is complete, we move on to designing the system architecture and user interfaces. Our approach focuses on creating intuitive, user-friendly designs that align with your brand identity while ensuring the technical architecture supports your scalability and performance requirements.
-                    </p>
+                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">{t('services.designArchitecture')}</h3>
+                    <p className="text-gray-600">{t('services.designArchitectureDescription')}</p>
                   </div>
                 </div>
               </div>
@@ -197,10 +187,8 @@ const Services = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">Development & Testing</h3>
-                    <p className="text-gray-600">
-                      Our development process follows agile methodologies, with regular sprints and frequent client updates. We implement rigorous testing protocols throughout development to ensure high-quality, bug-free software. This includes unit testing, integration testing, and end-to-end testing to validate functionality, performance, and security.
-                    </p>
+                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">{t('services.developmentTesting')}</h3>
+                    <p className="text-gray-600">{t('services.developmentTestingDescription')}</p>
                   </div>
                 </div>
               </div>
@@ -213,10 +201,8 @@ const Services = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">Deployment & Support</h3>
-                    <p className="text-gray-600">
-                      Once development is complete, we handle the deployment of your software to the appropriate environments. We ensure a smooth transition with minimal disruption to your operations. After launch, we provide ongoing support and maintenance to address any issues, implement updates, and make enhancements as your business evolves.
-                    </p>
+                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">{t('services.deploymentSupport')}</h3>
+                    <p className="text-gray-600">{t('services.deploymentSupportDescription')}</p>
                   </div>
                 </div>
               </div>
@@ -228,10 +214,8 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-primary text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl max-w-2xl mx-auto mb-8 text-blue-100">
-            Contact us today to discuss how our services can help you achieve your business goals.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('services.ctaTitle')}</h2>
+          <p className="text-xl max-w-2xl mx-auto mb-8 text-blue-100">{t('services.ctaSubtitle')}</p>
           <Button asChild variant="secondary" size="lg" className="px-8">
             <Link to="/contact">Get Started</Link>
           </Button>

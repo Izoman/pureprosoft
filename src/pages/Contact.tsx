@@ -1,6 +1,6 @@
-
 import { MapPin, Phone, Mail } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
+import { t } from 'i18next';
 
 const Contact = () => {
   return (
@@ -9,10 +9,8 @@ const Contact = () => {
       <section className="bg-purpro-900 text-white py-24 px-4">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-blue-100">
-              Have a question or ready to start your project? Get in touch with our team.
-            </p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('contact.title')}</h1>
+            <p className="text-xl text-blue-100">{t('contact.subtitle')}</p>
           </div>
         </div>
       </section>
@@ -23,10 +21,8 @@ const Contact = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-semibold text-purpro-800 mb-6">Get In Touch</h2>
-                <p className="text-gray-600 mb-8">
-                  We'd love to hear from you. Whether you have a question about our services, need a consultation, or want to discuss a project, our team is ready to assist you.
-                </p>
+                <h2 className="text-3xl font-semibold text-purpro-800 mb-6">{t('contact.getInTouch')}</h2>
+                <p className="text-gray-600 mb-8">{t('contact.getInTouchDescription')}</p>
                 
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start space-x-4">
@@ -34,7 +30,7 @@ const Contact = () => {
                       <Mail className="text-primary" size={24} />
                     </div>
                     <div>
-                      <h3 className="font-medium text-purpro-800 text-lg">Email</h3>
+                      <h3 className="font-medium text-purpro-800 text-lg">{t('contact.email')}</h3>
                       <p className="text-gray-600"><a href="mailto:info@pureprosoft.com">info@pureprosoft.com</a></p>
                     </div>
                   </div>
@@ -44,7 +40,7 @@ const Contact = () => {
                       <MapPin className="text-primary" size={24} />
                     </div>
                     <div>
-                      <h3 className="font-medium text-purpro-800 text-lg">Office</h3>
+                      <h3 className="font-medium text-purpro-800 text-lg">{t('contact.office')}</h3>
                       <p className="text-gray-600">
                         Paal, Belgium
                       </p>
@@ -53,19 +49,19 @@ const Contact = () => {
                 </div>
                 
                 <div className="bg-gray-100 p-6 rounded-lg">
-                  <h3 className="font-medium text-purpro-800 text-lg mb-4">Office Hours</h3>
+                  <h3 className="font-medium text-purpro-800 text-lg mb-4">{t('contact.officeHours')}</h3>
                   <div className="space-y-2">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Monday - Friday</span>
+                      <span className="text-gray-600">{t('contact.mondayFriday')}</span>
                       <span className="text-gray-800 font-medium">9:00 - 17:00 CEST</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Saturday</span>
+                      <span className="text-gray-600">{t('contact.saturday')}</span>
                       <span className="text-gray-800 font-medium">10:00 - 14:00 CEST</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Sunday</span>
-                      <span className="text-gray-800 font-medium">Closed</span>
+                      <span className="text-gray-600">{t('contact.sunday')}</span>
+                      <span className="text-gray-800 font-medium">{t('contact.closed')}</span>
                     </div>
                   </div>
                 </div>

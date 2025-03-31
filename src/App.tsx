@@ -13,10 +13,20 @@ import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const queryClient = new QueryClient();
+import "./i18n/i18n.ts";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
+
+function App() {
+  const { t, i18n } = useTranslation();
+  const queryClient = new QueryClient();
+
+  useEffect(() => {
+    i18n.changeLanguage(navigator.language);}, []); 
+
+  return (
+    <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
@@ -38,6 +48,9 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+}
+
+
 
 export default App;

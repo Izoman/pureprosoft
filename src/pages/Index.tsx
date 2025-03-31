@@ -1,4 +1,3 @@
-
 import { ArrowRight, Code, Layers, Shield, CloudLightning, FileCheck, Users } from 'lucide-react';
 import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
@@ -7,31 +6,33 @@ import CertificationCard from '@/components/CertificationCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import ScrollingBanner from '@/components/ui/scrolling-banner';
+import { t } from 'i18next';
 
 const Index = () => {
   // Services data
   const services = [
     {
-      title: "Custom Software Development",
-      description: "Tailor-made solutions to meet your specific business needs and requirements.",
+      title: t('index.servicesDetails.customSoftwareDevelopmentTitle'),
+      description: t('index.servicesDetails.customSoftwareDevelopmentDescription'),
       icon: Code,
       link: "/services"
     },
     {
-      title: "Cloud Consulting & Migration",
-      description: "Expert guidance and seamless transition to AWS or Azure cloud platforms.",
+      title: t('index.servicesDetails.cloudConsultingTitle'),
+      description: t('index.servicesDetails.cloudConsultingDescription'),
       icon: CloudLightning,
       link: "/services"
     },
     {
-      title: "Mobile & Web Application Development",
-      description: "Creating engaging digital experiences for your customers across all platforms.",
+      title: t('index.servicesDetails.mobileWebDevelopmentTitle'),
+      description: t('index.servicesDetails.mobileWebDevelopmentDescription'),
       icon: Layers,
       link: "/services"
     },
     {
-      title: "End-to-End Test Automation",
-      description: "Enhancing software quality through comprehensive automated testing.",
+      title: t('index.servicesDetails.testAutomationTitle'),
+      description: t('index.servicesDetails.testAutomationDescription'),
       icon: FileCheck,
       link: "/services"
     }
@@ -40,33 +41,33 @@ const Index = () => {
   // Expertise data
   const expertise = [
     {
-      title: ".NET & Blazor",
-      description: "Robust backend and UI development for scalable applications.",
+      title: t('index.expertiseDetails.dotNetBlazorTitle'),
+      description: t('index.expertiseDetails.dotNetBlazorDescription'),
       icon: Code
     },
     {
-      title: "WPF",
-      description: "Advanced desktop application development.",
+      title: t('index.expertiseDetails.wpfTitle'),
+      description: t('index.expertiseDetails.wpfDescription'),
       icon: Layers
     },
     {
-      title: "Angular & TypeScript",
-      description: "Frontend development for dynamic and responsive web applications.",
+      title: t('index.expertiseDetails.angularTypeScriptTitle'),
+      description: t('index.expertiseDetails.angularTypeScriptDescription'),
       icon: Code
     },
     {
-      title: "Azure & AWS",
-      description: "Cloud solutions tailored for scalability, security, and performance.",
+      title: t('index.expertiseDetails.azureAwsTitle'),
+      description: t('index.expertiseDetails.azureAwsDescription'),
       icon: CloudLightning
     },
     {
-      title: "Flutter, Android & iOS",
-      description: "Cross-platform and native mobile development for intuitive user experiences.",
+      title: t('index.expertiseDetails.flutterAndroidIosTitle'),
+      description: t('index.expertiseDetails.flutterAndroidIosDescription'),
       icon: Layers
     },
     {
-      title: "E2E Test Automation",
-      description: "Ensuring software reliability and efficiency through automated testing.",
+      title: t('index.expertiseDetails.testAutomationTitle'),
+      description: t('index.expertiseDetails.testAutomationDescription'),
       icon: FileCheck
     }
   ];
@@ -104,11 +105,8 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="section-heading">About Pure Pro Soft</h2>
-            <p className="text-gray-600 mb-8">
-              At Pure Pro Soft, we are committed to delivering clarity, integrity, and excellence 
-              in every project we undertake. Our name reflects our mission:
-            </p>
+            <h2 className="section-heading">{t('index.about')}</h2>
+            <p className="text-gray-600 mb-8">{t('index.aboutDescription')}</p>
             <div className="grid md:grid-cols-3 gap-8 mt-10">
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 text-center">
                 <h3 className="text-xl font-semibold text-purpro-800 mb-3">Pure</h3>
@@ -133,14 +131,22 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="section-heading">{t('index.partners')}</h2>
+            <p className="section-subheading">{t('index.partnersDescription')}</p>
+          </div>
+          <ScrollingBanner></ScrollingBanner>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="section-heading">Our Services</h2>
-            <p className="section-subheading">
-              We provide a wide range of software development and consulting services to help businesses thrive in the digital age.
-            </p>
+            <h2 className="section-heading">{t('index.services')}</h2>
+            <p className="section-subheading">{t('index.servicesDescription')}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
@@ -167,10 +173,8 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="section-heading">Our Expertise</h2>
-            <p className="section-subheading">
-              We offer a wide range of expertise in modern software development, covering various technologies and platforms.
-            </p>
+            <h2 className="section-heading">{t('index.expertise')}</h2>
+            <p className="section-subheading">{t('index.expertiseDescription')}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {expertise.map((item, index) => (
@@ -191,10 +195,8 @@ const Index = () => {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-semibold text-purpro-800 mb-6">Our Certifications</h2>
-                <p className="text-gray-600 mb-8">
-                  We uphold industry standards and continuously refine our expertise through recognized certifications, ensuring our solutions remain cutting-edge and reliable.
-                </p>
+                <h2 className="section-heading">{t('index.certifications')}</h2>
+                <p className="text-gray-600 mb-8">{t('index.certificationsDescription')}</p>
                 <div className="space-y-6">
                   <CertificationCard
                     title="AWS Solutions Architect - Associate"
@@ -255,10 +257,8 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-primary text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Build the Future Together</h2>
-          <p className="text-xl max-w-2xl mx-auto mb-8 text-blue-100">
-            Ready to transform your business with cutting-edge software solutions? Get in touch with us today!
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('index.ctaTitle')}</h2>
+          <p className="text-xl max-w-2xl mx-auto mb-8 text-blue-100">{t('index.ctaSubtitle')}</p>
           <Button asChild variant="secondary" size="lg" className="px-8">
             <Link to="/contact" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Contact Us</Link>
           </Button>

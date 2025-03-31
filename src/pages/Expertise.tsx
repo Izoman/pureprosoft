@@ -1,8 +1,8 @@
-
 import { Code, CloudLightning, Layers, FileCheck, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import CertificationCard from '@/components/CertificationCard';
+import { t } from 'i18next';
 
 const Expertise = () => {
   const technologies = [
@@ -92,10 +92,8 @@ const Expertise = () => {
       <section className="bg-purpro-900 text-white py-24 px-4">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Expertise</h1>
-            <p className="text-xl text-blue-100">
-              Cutting-edge technologies and industry best practices for exceptional software solutions.
-            </p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('expertise.title')}</h1>
+            <p className="text-xl text-blue-100">{t('expertise.subtitle')}</p>
           </div>
         </div>
       </section>
@@ -104,10 +102,8 @@ const Expertise = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="section-heading">Our Technical Expertise</h2>
-            <p className="section-subheading">
-              We offer a wide range of expertise in modern software development, covering various technologies and platforms.
-            </p>
+            <h2 className="section-heading">{t('expertise.technicalExpertise')}</h2>
+            <p className="section-subheading">{t('expertise.technicalExpertiseDescription')}</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -137,10 +133,8 @@ const Expertise = () => {
         <div className="container mx-auto">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="section-heading">Our Certifications</h2>
-              <p className="section-subheading">
-                We uphold industry standards and continuously refine our expertise through recognized certifications.
-              </p>
+              <h2 className="section-heading">{t('expertise.certifications')}</h2>
+              <p className="section-subheading">{t('expertise.certificationsDescription')}</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -222,7 +216,7 @@ const Expertise = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="section-heading">Our Development Process</h2>
+            <h2 className="section-heading">{t('expertise.developmentProcess')}</h2>
             <p className="section-subheading">
               We follow a structured agile methodology to ensure high-quality, efficient delivery of software solutions.
             </p>
@@ -236,10 +230,8 @@ const Expertise = () => {
               <div className="space-y-16">
                 <div className="relative flex flex-col md:flex-row items-center md:items-start">
                   <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-6 md:mt-0">
-                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">Requirements Analysis</h3>
-                    <p className="text-gray-600">
-                      We work closely with you to understand your business needs, user requirements, and project goals. This collaborative approach ensures that we develop solutions that align perfectly with your vision.
-                    </p>
+                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">{t('expertise.requirementsAnalysis')}</h3>
+                    <p className="text-gray-600">{t('expertise.requirementsAnalysisDescription')}</p>
                   </div>
                   <div className="md:absolute md:left-1/2 md:-translate-x-1/2 z-10 order-1 md:order-2">
                     <div className="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold shadow-lg">
@@ -257,19 +249,15 @@ const Expertise = () => {
                     </div>
                   </div>
                   <div className="md:w-1/2 md:pl-12 order-3 mt-6 md:mt-0">
-                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">Design & Architecture</h3>
-                    <p className="text-gray-600">
-                      Our expert architects design scalable, robust solutions that incorporate the latest technologies and best practices. We create detailed specifications that serve as the blueprint for development.
-                    </p>
+                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">{t('expertise.designArchitecture')}</h3>
+                    <p className="text-gray-600">{t('expertise.designArchitectureDescription')}</p>
                   </div>
                 </div>
                 
                 <div className="relative flex flex-col md:flex-row items-center md:items-start">
                   <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-6 md:mt-0">
-                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">Agile Development</h3>
-                    <p className="text-gray-600">
-                      We employ agile methodologies with iterative development cycles, allowing for frequent feedback and adjustments. This approach ensures flexibility and enables us to deliver high-quality solutions efficiently.
-                    </p>
+                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">{t('expertise.agileDevelopment')}</h3>
+                    <p className="text-gray-600">{t('expertise.agileDevelopmentDescription')}</p>
                   </div>
                   <div className="md:absolute md:left-1/2 md:-translate-x-1/2 z-10 order-1 md:order-2">
                     <div className="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold shadow-lg">
@@ -287,19 +275,15 @@ const Expertise = () => {
                     </div>
                   </div>
                   <div className="md:w-1/2 md:pl-12 order-3 mt-6 md:mt-0">
-                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">Testing & Quality Assurance</h3>
-                    <p className="text-gray-600">
-                      Our comprehensive testing process includes automated and manual testing to ensure that every aspect of your software functions correctly, securely, and efficiently.
-                    </p>
+                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">{t('expertise.testingQA')}</h3>
+                    <p className="text-gray-600">{t('expertise.testingQADescription')}</p>
                   </div>
                 </div>
                 
                 <div className="relative flex flex-col md:flex-row items-center md:items-start">
                   <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 mt-6 md:mt-0">
-                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">Deployment & Support</h3>
-                    <p className="text-gray-600">
-                      We handle the deployment process with care, ensuring smooth transitions and minimal disruption. Our ongoing support services ensure that your software continues to perform optimally.
-                    </p>
+                    <h3 className="text-xl font-semibold text-purpro-800 mb-3">{t('expertise.deploymentSupport')}</h3>
+                    <p className="text-gray-600">{t('expertise.deploymentSupportDescription')}</p>
                   </div>
                   <div className="md:absolute md:left-1/2 md:-translate-x-1/2 z-10 order-1 md:order-2">
                     <div className="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold shadow-lg">
@@ -317,10 +301,8 @@ const Expertise = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-purpro-800 text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Leverage Our Expertise?</h2>
-          <p className="text-xl max-w-2xl mx-auto mb-8 text-blue-100">
-            Partner with us to bring your software vision to life with our technical expertise and industry knowledge.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('expertise.ctaTitle')}</h2>
+          <p className="text-xl max-w-2xl mx-auto mb-8 text-blue-100">{t('expertise.ctaSubtitle')}</p>
           <Button asChild variant="secondary" size="lg" className="px-8">
             <Link to="/contact" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Discuss Your Project</Link>
           </Button>
