@@ -6,7 +6,8 @@ import {
   TwitterIcon, 
   MailIcon, 
   PhoneIcon, 
-  MapPinIcon 
+  MapPinIcon, 
+  FacebookIcon
 } from 'lucide-react';
 
 const Footer = () => {
@@ -22,8 +23,11 @@ const Footer = () => {
               Delivering clarity, integrity, and excellence in every software project we undertake.
             </p>
             <div className="flex space-x-4 pt-2">
-              <a href="https://www.linkedin.com/company/pure-pro-soft" className="text-gray-300 hover:text-white transition-colors">
-                <LinkedinIcon size={20} />
+              <a href="https://www.linkedin.com/company/pure-pro-soft" className="text-gray-300 hover:text-white transition-colors" target='_blank'>
+                <LinkedinIcon size={20}/>
+              </a>
+              <a href="https://www.facebook.com/pureprosoft" className="text-gray-300 hover:text-white transition-colors" target='_blank'>
+                <FacebookIcon size={20}/>
               </a>
             </div>
           </div>
@@ -82,15 +86,6 @@ const Footer = () => {
               </li>
             </ul>
             <br></br>
-            <div className="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://www.pureprosoft.com/" data-a2a-title="Pure Pro Soft">
-                <a className="a2a_dd" href="https://www.addtoany.com/share"></a>
-                <a className="a2a_button_facebook"></a>
-                <a className="a2a_button_linkedin"></a>
-                <a className="a2a_button_reddit"></a>
-                <a className="a2a_button_whatsapp"></a>
-                <a className="a2a_button_x"></a>
-                <a className="a2a_button_blogger"></a>
-              </div> 
           </div>
         </div>
         
