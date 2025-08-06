@@ -1,18 +1,21 @@
 
 import { Link } from 'react-router-dom';
-import { 
-  LinkedinIcon, 
-  GithubIcon, 
-  TwitterIcon, 
-  MailIcon, 
-  PhoneIcon, 
-  MapPinIcon, 
+import {
+  LinkedinIcon,
+  GithubIcon,
+  TwitterIcon,
+  MailIcon,
+  PhoneIcon,
+  MapPinIcon,
   FacebookIcon
 } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+  const openCookieBanner = () => {
+    const event = new Event("reopenCookieBanner");
+    window.dispatchEvent(event);
+  };
   return (
     <footer className="bg-purpro-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -24,56 +27,56 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4 pt-2">
               <a href="https://www.linkedin.com/company/pure-pro-soft" className="text-gray-300 hover:text-white transition-colors" target='_blank'>
-                <LinkedinIcon size={20}/>
+                <LinkedinIcon size={20} />
               </a>
               <a href="https://www.facebook.com/pureprosoft" className="text-gray-300 hover:text-white transition-colors" target='_blank'>
-                <FacebookIcon size={20}/>
+                <FacebookIcon size={20} />
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Home</Link>
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>Home</Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>About Us</Link>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>About Us</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Services</Link>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>Services</Link>
               </li>
               <li>
-                <Link to="/expertise" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Expertise</Link>
+                <Link to="/expertise" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>Expertise</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Contact</Link>
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>Contact</Link>
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Custom Software Development</Link>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>Custom Software Development</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Cloud Consulting & Migration</Link>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>Cloud Consulting & Migration</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>Mobile & Web Application</Link>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>Mobile & Web Application</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({top: 0, behavior: 'smooth'})}>End-to-End Test Automation</Link>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>End-to-End Test Automation</Link>
               </li>
             </ul>
           </div>
-          
+
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>             
-              <ul className="space-y-3">
+            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+            <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MailIcon size={18} className="mt-1 flex-shrink-0" />
                 <span className="text-gray-300"><a href="mailto:info@pureprosoft.com">info@pureprosoft.com</a></span>
@@ -88,19 +91,27 @@ const Footer = () => {
             <br></br>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               &copy; {currentYear} PureProSoft. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <a href="/privacypolicy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <a href="/termsandconditions" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </a>
+            </div>
+            <div>
+              <button
+                onClick={openCookieBanner}
+                className="underline text-blue-600 hover:text-blue-800 ml-2"
+              >
+                Cookie Preferences
+              </button>
             </div>
           </div>
         </div>
